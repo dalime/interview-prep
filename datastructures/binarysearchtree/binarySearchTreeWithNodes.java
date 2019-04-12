@@ -18,10 +18,6 @@ class BinarySearchTreeWithNodes {
   }
 
   public Node insert(Node root, int data) {
-    if (this.root == null) {
-      this.root = new Node(data);
-    }
-
     if (root == null) {
       root = new Node(data);
     } else if (data <= root.data) {
