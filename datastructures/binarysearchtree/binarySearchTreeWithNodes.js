@@ -38,16 +38,18 @@ class BinarySearchTreeWithNodes {
   }
 }
 
-console.log('Starting job...');
-var myTree = new BinarySearchTreeWithNodes();
-var root = null;
-root = myTree.insert(root, 2);
-myTree.root = root;
-root = myTree.insert(root, 8);
-root = myTree.insert(root, 10);
-root = myTree.insert(root, 4);
-root = myTree.insert(root, 6);
-console.log('Search for 2: ' + myTree.search(myTree.root, 2));
-console.log('Search for 11: ' + myTree.search(myTree.root, 11));
-console.log('Search for 4: ' + myTree.search(myTree.root, 4));
-console.log('Search for 8: ' + myTree.search(myTree.root, 8));
+// console.log('Starting job...');
+// var myTree = new BinarySearchTreeWithNodes();
+// var root = null;
+// root = myTree.insert(root, 2);
+// myTree.root = root;
+// root = myTree.insert(root, 8);
+// root = myTree.insert(root, 10);
+// root = myTree.insert(root, 4);
+// root = myTree.insert(root, 6);
+// console.log('Search for 2: ' + myTree.search(myTree.root, 2));
+// console.log('Search for 11: ' + myTree.search(myTree.root, 11));
+// console.log('Search for 4: ' + myTree.search(myTree.root, 4));
+// console.log('Search for 8: ' + myTree.search(myTree.root, 8));
+
+module.exports = BinarySearchTreeWithNodes;
