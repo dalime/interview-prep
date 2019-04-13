@@ -77,12 +77,12 @@ class BinaryTreeHeight {
     BinaryTreeHeight myTree = new BinaryTreeHeight();
     Node root = myTree.root;
     root = myTree.insert(root, 8);
-    myTree.root = root;
     root = myTree.insert(root, 10);
     root = myTree.insert(root, 4);
     root = myTree.insert(root, 2);
     root = myTree.insert(root, 6);
     root = myTree.insert(root, 12);
+    myTree.root = root;
     System.out.println("Height of the tree is: " + myTree.findHeight());
   }
 }

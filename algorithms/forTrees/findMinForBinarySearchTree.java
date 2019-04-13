@@ -57,12 +57,12 @@ class MinBinarySearchTree {
     System.out.println("Search for 8: " + myTree.search(null, 8));
     System.out.println("The min is: " + myTree.findMin(myTree.root));
     root = myTree.insert(root, 2);
-    myTree.root = root;
     root = myTree.insert(root, 10);
     root = myTree.insert(root, 4);
     root = myTree.insert(root, 8);
     root = myTree.insert(root, 6);
     root = myTree.insert(root, 12);
+    myTree.root = root;
     System.out.println("Search for 8: " + myTree.search(myTree.root, 8));
     System.out.println("Search for 12: " + myTree.search(myTree.root, 12));
     System.out.println("Search for 7: " + myTree.search(myTree.root, 7));
