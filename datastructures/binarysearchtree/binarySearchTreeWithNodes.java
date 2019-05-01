@@ -40,6 +40,46 @@ class BinarySearchTreeWithNodes {
     }
   }
 
+  public void preOrder(Node root) {
+    if (root == null) return;
+    System.out.print("[" + root.data + "] ");
+    preOrder(root.left);
+    preOrder(root.right);
+  }
+
+  public Node findMin(Node root) {
+    if (root == null) {
+      System.out.println("Tree is empty.");
+      return null;
+    } else if (root.left == null) {
+      return root;
+    } else {
+      return findMin(root.left);
+    }
+  }
+
+  public Node delete(Node root, int data) {
+    if (root == null) return root;
+    if (data < root.data) {
+      root.left = delete(root.left, data);
+    } else if (data > root.data) {
+      root.right = delete(root.right, data);
+    } else {
+      if (root.left == null && root.right == null) {
+        root = null;
+      } else if (root.left == null) {
+        root = root.right;
+      } else if (root.right == null) {
+        root = root.left;
+      } else {
+        Node temp = findMin(root.right);
+        root.data = temp.data;
+        root.right = delete(root.right, temp.data);
+      }
+    }
+    return root;
+  }
+
   public static void main(String[] args) {
     BinarySearchTreeWithNodes myTree = new BinarySearchTreeWithNodes();
     Node root = myTree.root;
@@ -53,5 +93,7 @@ class BinarySearchTreeWithNodes {
     System.out.println("Search for 11: " + myTree.search(myTree.root, 11));
     System.out.println("Search for 4: " + myTree.search(myTree.root, 4));
     System.out.println("Search for 8: " + myTree.search(myTree.root, 8));
+    myTree.delete(root, 6);
+    myTree.preOrder(root);
   }
 }
