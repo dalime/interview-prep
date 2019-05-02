@@ -48,7 +48,6 @@ public class PreOrderTraversal {
   }
 
   public static void main(String[] args) {
-    System.out.println("Hello World!");
     PreOrderTraversal myTree = new PreOrderTraversal();
     Node root = myTree.root;
     root = myTree.insert(root, 2);

@@ -42,8 +42,8 @@ class PostOrderTraversal {
 
   public void postOrder(Node root) {
     if (root == null) return;
-    if (root.left) postOrder(root.left);
-    if (root.right) postOrder(root.right);
+    if (root.left != null) postOrder(root.left);
+    if (root.right != null) postOrder(root.right);
     System.out.print("[" + root.data + "] ");
   }
 
